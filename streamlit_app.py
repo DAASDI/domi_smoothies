@@ -45,5 +45,9 @@ my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_or
 time_to_insert = st.button('Submit Order')
 
 if time_to_insert:
-    session.sql(my_insert_stmt).collect()
+    #session.sql(my_insert_stmt).collect()
+    import requests
+    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+    st.text(smoothiefroot_response)
+
     st.success('Your Smoothie is ordered!',  icon="✅")
