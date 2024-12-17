@@ -1,7 +1,7 @@
 # Import python packages
 import streamlit as st
 #from snowflake.snowpark.context import get_active_session
-import requests
+import requests as lt
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
@@ -49,5 +49,5 @@ if time_to_insert:
     # session.sql(my_insert_stmt).collect()
     
     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-    st.text(smoothiefroot_response)
+    lt.text(smoothiefroot_response)
     # st.success('Your Smoothie is ordered!',  icon="✅")
