@@ -48,5 +48,5 @@ if time_to_insert:
     # session.sql(my_insert_stmt).collect()
     import requests as lt
     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-    lt.text(smoothiefroot_response)
+    st.text(smoothiefroot_response)
     # st.success('Your Smoothie is ordered!',  icon="✅")
